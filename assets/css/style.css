@@ -2,11 +2,22 @@
 
 :root {
   --primary-color: #00b6e8;
+  --secondary-color: ;
 }
 
 .general-button-reset {
   border: none;
   background: transparent;
+}
+
+.general-bg {
+  background-color: var(--primary-color) !important;
+  border: var(--primary-color) !important;
+}
+
+a {
+  color: black !important;
+  text-decoration: none !important;
 }
 
 /* General End  */
@@ -19,6 +30,7 @@
 
 .navbar-container {
   height: 80px;
+  z-index: 3;
 }
 
 .navbar-mid-container div {
@@ -71,6 +83,7 @@
   height: calc(100vh - 80px);
   position: absolute;
   top: 80px;
+  z-index: 2;
 }
 
 .navbar-mobile-menu-content-inner {
@@ -105,13 +118,18 @@
   height: calc(63px- 1rem);
 }
 
+.navbar-placeholder {
+  height: 80px;
+}
+
 /* Navbar End  */
 
 /* Sidebar Start */
 .sidebar-menu-outer {
-  opacity: 0.75 !important;
-  z-index: 0;
+  opacity: 1 !important;
+  z-index: 9;
   top: 80px;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .sidebar-menu-inner {
@@ -156,6 +174,68 @@
   object-fit: contain;
 }
 /* Sidebar End */
+/* Showcase Start */
+.index-showcase-info-orange-line {
+  height: 52px;
+  background-color: #fc6721;
+}
+
+.index-showcase-info-orange-line p i {
+  font-size: 12px;
+}
+
+.showcase-main-text-underline {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.showcase-main-text-underline:after {
+  content: ".";
+  text-indent: -999999999999px;
+  background-image: url(https://cdn.apsiyon.com/V5/dist/img/ui/underline_1.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  top: 42px;
+}
+
+.showcase-main-image-container {
+  object-fit: contain;
+}
+/* Showcase End */
+
+/* Index Start */
+.nav-link {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-bottom: 3px solid var(--primary-color) !important;
+  border-color: var(--primary-color);
+}
+
+.accordion-item .accordion-button {
+  border-bottom: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: black !important;
+}
+
+.index-card {
+  height: 438px;
+}
+/* Index End */
 
 @media only screen and (max-width: 1200px) {
   /* Navbar Start  */
@@ -177,6 +257,40 @@
     display: none !important;
   }
   /* Sidebar End */
+  /* Showcase Start */
+  .index-showcase-info-orange-line {
+    height: max-content;
+    padding: 15px 0px;
+    text-align: center;
+  }
+  .showcase-main-text {
+    text-align: center;
+  }
+  .showcase-main-text br {
+    display: none;
+  }
+
+  .showcase-main-text-underline:after {
+    display: none;
+  }
+
+  .showcase-main-image-container {
+    height: 320px;
+  }
+  /* Showcase End */
+}
+
+@media only screen and (max-width: 1000px) {
+  /* Index Start */
+  .index-tabs-image {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .index-card {
+    height: auto !important;
+  }
+  /* Index End */
 }
 
 @media only screen and (min-width: 1200px) {

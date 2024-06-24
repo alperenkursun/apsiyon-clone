@@ -53,7 +53,7 @@
       </div>
    </nav>
 </header>
-<sidebar id="sidebar-menu-outer" class="vw-100 vh-100 bg-dark position-fixed z-0 sidebar-menu-outer d-none">
+<sidebar id="sidebar-menu-outer" class="vw-100 vh-100  position-fixed  sidebar-menu-outer d-none">
    <div class="w-100 bg-white sidebar-menu-inner">
       <div class="container d-flex  sidebar-menu-content">
          <div class="p-4 ps-0 sidebar-menu-content-item">
@@ -154,7 +154,7 @@
       </div>
    </div>
 </sidebar>
-<div id="navbar-mobile-menu-content-container" class="w-100 position-fixed d-none navbar-mobile-menu-content-container">
+<div id="navbar-mobile-menu-content-container" class="w-100 position-fixed bg-white d-none navbar-mobile-menu-content-container">
    <div class="position-relative navbar-mobile-menu-content-inner">
   
          <div class="w-100 fw-bold  border-bottom p-3 d-flex align-items-center navbar-mobile-menu-content-item">Menü</div>
@@ -194,4 +194,3 @@
       <button class="btn btn-outline-dark mx-auto navbar-mobile-menu-content-login-button">Giriş Yap</button>
    </div>
 </div>
-<div style="height: 1000px"></div>
